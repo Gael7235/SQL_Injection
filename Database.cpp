@@ -23,17 +23,6 @@ Database::Database()
     }
 }
 
-void Database::outputEmailChoices()
-{
-    sql::Statement* command = myConnection->createStatement();
-    sql::ResultSet* row = command->executeQuery("SELECT email_address "
-        "FROM users");
-
-    while (row->next()) {
-        cout << row->getString("email_address") << endl;
-    }
-}
-
 void Database::signIn()
 {
 
