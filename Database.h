@@ -13,8 +13,10 @@ class Database
 {
 private:
 	sql::Connection* myConnection;
+	bool hasAccess;
 public:
 	Database();
 	void outputEmailChoices();
-  void signIn();
+	void signIn();
+	bool access();
 };
