@@ -1,0 +1,8 @@
+The program first asks for your email, and then your password. To perform a SQL injection attack, when prompted to enter the email, enter "'OR 1=1 #", it doesn't matter what you put for the password section, I put 'x'.
+The corresponding code in SQL is SELECT * FROM USERS WHERE email_address = '[email_input]' AND user_password = '[password_input]'.
+With the Inserted values' SELECT * FROM USERS WHERE email_address = ''OR 1=1 #' AND user_password = 'x'
+As you can see, the quote makes whatever follows SQL code rather than a string, and the expression WHERE email_address = ''OR 1=1 comes out to be true always, the rest is commented out using #.
+The library functions I use for sql connection to C++ actually already have SQL injection prevention so I had to write the code a little differently to demonstrate SQL injection.
+This is one of the ways you can prevent a SQL injection attack, a lot of programming languages SQL connection libraries have this built in, so you can use prepared statements.
+Another way to prevent SQL Injection attacks is to reject any input that contains dangerous characters such as single quotes '' and #.
+Of course you could also just use a NoSQL DBMS for your application to avoid this altogether.
