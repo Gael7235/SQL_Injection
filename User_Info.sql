@@ -1,3 +1,5 @@
+-- Create Schema called "User_info" in mySQL
+
 -- Create the Table
 CREATE TABLE Users(
 user_ID		int		AUTO_INCREMENT PRIMARY KEY,
