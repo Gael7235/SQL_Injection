@@ -16,7 +16,6 @@ private:
 	bool hasAccess;
 public:
 	Database();
-	void outputEmailChoices();
 	void signIn();
 	bool access();
 };
