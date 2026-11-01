@@ -1,3 +1,5 @@
+Gael Ortega Bardales, CSCE A360: Database Systems
+
 The program first asks for your email, and then your password. To perform a SQL injection attack, when prompted to enter the email, enter "'OR 1=1 #", it doesn't matter what you put for the password section, I put 'x'.
 The corresponding code in SQL is SELECT * FROM USERS WHERE email_address = '[email_input]' AND user_password = '[password_input]'.
 With the Inserted values' SELECT * FROM USERS WHERE email_address = ''OR 1=1 #' AND user_password = 'x'
